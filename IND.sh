@@ -33,7 +33,7 @@ function installnxd
 
 ## Not Yet Implemented
 		if [ ! -f /home/pi-star/ndis.txt ]; then
-		 echo $(pwd)"/installnextiondriver.sh" >  /home/pi-star/ndis.txt
+		 echo $(pwd)"/IND.sh" >  /home/pi-star/ndis.txt
 		fi
 
 		#Remove the Nextion Driver if it exists
@@ -184,7 +184,7 @@ sudo sed -i '/^\[Nextion\]/,/^\[/ { x; /^$/ !{ x; H }; /^$/ { x; h; }; d; }; x; 
 	#rm -R /Nextion
         
 	if [ -f /home/pi-star/ndis.txt ]; then
-	  rm /home/pi-star/ndis.txt
+	  sudo rm /home/pi-star/ndis.txt
 	fi
 	sudo reboot
 fi
